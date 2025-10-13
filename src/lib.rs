@@ -33,6 +33,15 @@
 //! - [`position`]: Inventory tracking and PnL management
 //! - [`market_state`]: Market data representation
 //! - [`types`]: Common types and error definitions
+//! - [`prelude`]: Convenient re-exports of commonly used types
+//!
+//! # Quick Start
+//!
+//! Import commonly used types with the prelude:
+//!
+//! ```rust
+//! use market_maker_rs::prelude::*;
+//! ```
 //!
 //! # Examples
 //!
@@ -48,7 +57,7 @@
 /// - Reservation price computation
 /// - Optimal spread calculation
 /// - Bid/ask quote generation
-pub mod strategy {}
+pub mod strategy;
 
 /// Position management module for tracking inventory and PnL.
 ///
@@ -56,7 +65,7 @@ pub mod strategy {}
 /// - Position updates on fills
 /// - Average entry price calculation
 /// - Realized and unrealized PnL tracking
-pub mod position {}
+pub mod position;
 
 /// Market state module for representing observable market data.
 ///
@@ -64,7 +73,7 @@ pub mod position {}
 /// - Market state snapshots
 /// - Volatility estimation
 /// - Price tracking
-pub mod market_state {}
+pub mod market_state;
 
 /// Common types and error definitions.
 ///
@@ -72,4 +81,10 @@ pub mod market_state {}
 /// - Shared data types
 /// - Error types using thiserror
 /// - Type aliases for domain concepts
-pub mod types {}
+pub mod types;
+
+/// Prelude module for convenient imports.
+///
+/// Re-exports the most commonly used types and traits.
+/// Users can import everything with `use market_maker_rs::prelude::*;`
+pub mod prelude;

@@ -1,6 +1,6 @@
 [package]
 name = "market-maker-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Joaquin Bejar <jb@taunais.com>"]
 description = "A Rust library implementing quantitative market making strategies, starting with the Avellaneda-Stoikov model"
@@ -30,10 +30,12 @@ path = "src/lib.rs"
 [dependencies]
 thiserror = "2.0"
 serde = { version = "1.0", features = ["derive"], optional = true }
+serde_json = { version = "1.0", optional = true }
+pretty-simple-display = { version = "0.1.0", optional = true }
 
 [dev-dependencies]
-rand = "0.8"
+serde_json = "1.0"
 
 [features]
 default = []
-serde = ["dep:serde"]
+serde = ["dep:serde", "dep:serde_json", "dep:pretty-simple-display"]

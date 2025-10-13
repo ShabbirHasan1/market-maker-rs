@@ -47,6 +47,15 @@ stochastic control theory. It determines optimal bid and ask prices given:
 - [`position`]: Inventory tracking and PnL management
 - [`market_state`]: Market data representation
 - [`types`]: Common types and error definitions
+- [`prelude`]: Convenient re-exports of commonly used types
+
+## Quick Start
+
+Import commonly used types with the prelude:
+
+```rust
+use market_maker_rs::prelude::*;
+```
 
 ## Examples
 
