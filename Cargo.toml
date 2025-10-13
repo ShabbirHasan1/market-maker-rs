@@ -1,0 +1,39 @@
+[package]
+name = "market-maker-rs"
+version = "0.1.0"
+edition = "2024"
+authors = ["Joaquin Bejar <jb@taunais.com>"]
+description = "A Rust library implementing quantitative market making strategies, starting with the Avellaneda-Stoikov model"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/joaquinbejar/market-maker-rs"
+homepage = "https://github.com/joaquinbejar/market-maker-rs"
+keywords = ["finance", "market-making", "trading", "quantitative", "avellaneda-stoikov"]
+categories = ["finance", "mathematics", "algorithms"]
+include = [
+    "benches/**/*",
+    "src/**/*",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+    "examples/**/*.rs",
+    "tests/**/*.rs",
+    "Makefile",
+    "rust-toolchain.toml",
+    "doc/**/*.md",
+]
+
+[lib]
+name = "market_maker_rs"
+path = "src/lib.rs"
+
+[dependencies]
+thiserror = "2.0"
+serde = { version = "1.0", features = ["derive"], optional = true }
+
+[dev-dependencies]
+rand = "0.8"
+
+[features]
+default = []
+serde = ["dep:serde"]
