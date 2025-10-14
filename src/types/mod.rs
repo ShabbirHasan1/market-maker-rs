@@ -5,9 +5,11 @@
 //! - Type aliases for domain concepts
 //! - Common enums and shared data structures
 
-/// Error types for the market making library.
+/// Error types and result handling.
 pub mod error;
 
+/// Decimal arithmetic helpers.
 pub mod decimal;
+
 /// Common type aliases for prices, quantities, and time.
 pub mod primitives;
