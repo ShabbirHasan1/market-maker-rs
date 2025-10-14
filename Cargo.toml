@@ -39,7 +39,7 @@ orderbook-rs = "0.4"
 
 [dev-dependencies]
 serde_json = "1.0"
-tokio = { version = "1.0", features = ["macros", "rt", "time", "rt-multi-thread"] }
+tokio = { version = "1.47", features = ["macros", "rt", "time", "rt-multi-thread"] }
 
 [features]
 default = []
