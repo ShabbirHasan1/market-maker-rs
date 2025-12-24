@@ -33,6 +33,7 @@
 //! - [`position`]: Inventory tracking and PnL management
 //! - [`market_state`]: Market data representation
 //! - [`risk`]: Position limits, exposure control, and circuit breakers
+//! - [`analytics`]: Market data analysis and order flow metrics
 //! - [`types`]: Common types and error definitions
 //! - [`prelude`]: Convenient re-exports of commonly used types
 //!
@@ -80,6 +81,14 @@ pub mod risk;
 
 /// Common types and errors.
 pub mod types;
+
+/// Analytics module for market data analysis.
+///
+/// This module provides tools for analyzing market microstructure data:
+/// - Order flow imbalance analysis
+/// - Trade flow metrics and VWAP calculation
+/// - Trade intensity measurement
+pub mod analytics;
 
 /// Prelude module for convenient imports.
 pub mod prelude;

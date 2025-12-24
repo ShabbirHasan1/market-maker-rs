@@ -39,3 +39,9 @@ pub use crate::risk::{
     CircuitBreaker, CircuitBreakerConfig, CircuitBreakerState, DrawdownRecord, DrawdownTracker,
     RiskLimits, TriggerReason,
 };
+
+// Re-export analytics types
+pub use crate::analytics::order_flow::{
+    OrderFlowAnalyzer, OrderFlowAnalyzerBuilder, OrderFlowStats, TradeSide,
+};
+// Note: Trade is already exported from strategy::adaptive_spread

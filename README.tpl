@@ -1,4 +1,4 @@
-[![Dual License](https://img.shields.io/badge/license-MIT%20and%20Apache%202.0-blue)](./LICENSE)
+[![Dual License](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 [![Crates.io](https://img.shields.io/crates/v/market-maker-rs.svg)](https://crates.io/crates/market-maker-rs)
 [![Downloads](https://img.shields.io/crates/d/market-maker-rs.svg)](https://crates.io/crates/market-maker-rs)
 [![Stars](https://img.shields.io/github/stars/joaquinbejar/market-maker-rs.svg)](https://github.com/joaquinbejar/market-maker-rs/stargazers)
