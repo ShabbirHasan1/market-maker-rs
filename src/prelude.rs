@@ -52,3 +52,10 @@ pub use crate::analytics::vpin::{
     BucketStats, TradeClassifier, VPINCalculator, VPINConfig, VolumeBucket,
 };
 // Note: Trade is already exported from strategy::adaptive_spread
+
+// Re-export execution types
+pub use crate::execution::{
+    BookLevel, ExchangeConnector, Fill, MarketDataStream, MockConfig, MockExchangeConnector,
+    OrderBookSnapshot, OrderId, OrderRequest, OrderResponse, OrderStatus, OrderType, Side,
+    TimeInForce,
+};

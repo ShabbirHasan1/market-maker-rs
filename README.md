@@ -48,6 +48,7 @@ stochastic control theory. It determines optimal bid and ask prices given:
 - [`market_state`]: Market data representation
 - [`risk`]: Position limits, exposure control, and circuit breakers
 - [`analytics`]: Market data analysis and order flow metrics
+- [`execution`]: Exchange connectivity and order management
 - [`types`]: Common types and error definitions
 - [`prelude`]: Convenient re-exports of commonly used types
 

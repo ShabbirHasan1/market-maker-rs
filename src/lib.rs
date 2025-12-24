@@ -34,6 +34,7 @@
 //! - [`market_state`]: Market data representation
 //! - [`risk`]: Position limits, exposure control, and circuit breakers
 //! - [`analytics`]: Market data analysis and order flow metrics
+//! - [`execution`]: Exchange connectivity and order management
 //! - [`types`]: Common types and error definitions
 //! - [`prelude`]: Convenient re-exports of commonly used types
 //!
@@ -89,6 +90,14 @@ pub mod types;
 /// - Trade flow metrics and VWAP calculation
 /// - Trade intensity measurement
 pub mod analytics;
+
+/// Execution module for exchange connectivity and order management.
+///
+/// This module provides traits and types for exchange interaction:
+/// - Order submission, cancellation, and modification
+/// - Market data retrieval (order book snapshots)
+/// - Mock implementation for testing
+pub mod execution;
 
 /// Prelude module for convenient imports.
 pub mod prelude;
