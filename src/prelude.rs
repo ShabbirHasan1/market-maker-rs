@@ -55,7 +55,8 @@ pub use crate::analytics::vpin::{
 
 // Re-export execution types
 pub use crate::execution::{
-    BookLevel, ExchangeConnector, Fill, ManagedOrder, MarketDataStream, MockConfig,
+    BookLevel, ExchangeConnector, Fill, Histogram, LatencyMeasurement, LatencyMetric, LatencyStats,
+    LatencyTracker, LatencyTrackerConfig, ManagedOrder, MarketDataStream, MockConfig,
     MockExchangeConnector, OrderBookSnapshot, OrderId, OrderManager, OrderManagerConfig,
     OrderManagerStats, OrderRequest, OrderResponse, OrderStatus, OrderType, Side,
     ThreadSafeOrderManager, TimeInForce,

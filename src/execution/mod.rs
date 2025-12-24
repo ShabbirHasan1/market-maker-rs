@@ -12,6 +12,7 @@
 //! - **Connector traits**: `ExchangeConnector`, `MarketDataStream`
 //! - **Mock implementation**: `MockExchangeConnector` for testing
 //! - **Order management**: `OrderManager`, `ManagedOrder` for order lifecycle
+//! - **Latency tracking**: `LatencyTracker`, `LatencyStats` for performance monitoring
 //!
 //! # Example
 //!
@@ -43,9 +44,16 @@ pub mod mock;
 /// Order management system.
 pub mod order_manager;
 
+/// Latency tracking and metrics.
+pub mod latency;
+
 pub use connector::{
     BookLevel, ExchangeConnector, Fill, MarketDataStream, OrderBookSnapshot, OrderId, OrderRequest,
     OrderResponse, OrderStatus, OrderType, Side, TimeInForce,
+};
+pub use latency::{
+    Histogram, LatencyMeasurement, LatencyMetric, LatencyStats, LatencyTracker,
+    LatencyTrackerConfig,
 };
 pub use mock::{MockConfig, MockExchangeConnector};
 pub use order_manager::{
