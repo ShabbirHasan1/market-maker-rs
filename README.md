@@ -46,7 +46,7 @@ stochastic control theory. It determines optimal bid and ask prices given:
 - [`strategy`]: Pure mathematical calculations for quote generation
 - [`position`]: Inventory tracking and PnL management
 - [`market_state`]: Market data representation
-- [`risk`]: Position limits and exposure control
+- [`risk`]: Position limits, exposure control, and circuit breakers
 - [`types`]: Common types and error definitions
 - [`prelude`]: Convenient re-exports of commonly used types
 

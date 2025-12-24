@@ -29,4 +29,7 @@ pub use crate::position::pnl::PnL;
 pub use crate::market_state::snapshot::MarketState;
 
 // Re-export risk types
+pub use crate::risk::{
+    CircuitBreaker, CircuitBreakerConfig, CircuitBreakerState, RiskLimits, TriggerReason,
+};
 pub use crate::risk::RiskLimits;
