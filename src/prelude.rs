@@ -41,6 +41,10 @@ pub use crate::risk::{
 };
 
 // Re-export analytics types
+pub use crate::analytics::intensity::{
+    FillObservation, FillSide, IntensityEstimate, ObservationStats, OrderIntensityConfig,
+    OrderIntensityEstimator,
+};
 pub use crate::analytics::order_flow::{
     OrderFlowAnalyzer, OrderFlowAnalyzerBuilder, OrderFlowStats, TradeSide,
 };

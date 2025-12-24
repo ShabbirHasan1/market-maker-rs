@@ -1,12 +1,14 @@
 //! Analytics module for market data analysis.
 //!
 //! This module provides tools for analyzing market microstructure data,
-//! including order flow analysis, trade flow metrics, and toxicity detection.
+//! including order flow analysis, trade flow metrics, toxicity detection,
+//! and dynamic parameter estimation.
 //!
 //! # Submodules
 //!
 //! - `order_flow`: Order flow imbalance analysis and trade tracking
 //! - `vpin`: VPIN (Volume-Synchronized Probability of Informed Trading) calculation
+//! - `intensity`: Dynamic order intensity estimation for A-S model
 //!
 //! # Example
 //!
@@ -27,6 +29,13 @@ pub mod order_flow;
 /// VPIN (Volume-Synchronized Probability of Informed Trading) calculation.
 pub mod vpin;
 
+/// Dynamic order intensity estimation.
+pub mod intensity;
+
+pub use intensity::{
+    FillObservation, FillSide, IntensityEstimate, ObservationStats, OrderIntensityConfig,
+    OrderIntensityEstimator,
+};
 pub use order_flow::{
     OrderFlowAnalyzer, OrderFlowAnalyzerBuilder, OrderFlowStats, Trade, TradeSide,
 };
