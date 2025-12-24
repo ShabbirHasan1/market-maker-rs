@@ -4,6 +4,7 @@
 //! - Avellaneda-Stoikov model using stochastic control theory
 //! - Grid trading for ranging markets
 //! - Depth-based offering
+//! - Adaptive spread based on order book imbalance
 //!
 //! # Key Formulas (Avellaneda-Stoikov)
 //!
@@ -38,3 +39,6 @@ pub mod depth_based;
 
 /// Grid trading strategy.
 pub mod grid;
+
+/// Adaptive spread based on order book imbalance.
+pub mod adaptive_spread;

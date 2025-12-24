@@ -18,6 +18,10 @@ pub use crate::types::primitives::{
 };
 
 // Re-export strategy types
+pub use crate::strategy::adaptive_spread::{
+    AdaptiveSpread, AdaptiveSpreadCalculator, AdaptiveSpreadConfig, OrderBookImbalance, Trade,
+    TradeFlowImbalance,
+};
 pub use crate::strategy::config::StrategyConfig;
 pub use crate::strategy::grid::{GridConfig, GridOrder, GridStrategy, OrderSide};
 pub use crate::strategy::quote::Quote;
