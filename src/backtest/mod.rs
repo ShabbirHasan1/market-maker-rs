@@ -12,6 +12,7 @@
 //! - **Strategy trait**: `BacktestStrategy` for strategy integration
 //! - **Engine**: `BacktestEngine` for running simulations
 //! - **Results**: `BacktestResult` with comprehensive metrics
+//! - **Fill models**: Realistic fill simulation with queue position and market impact
 //!
 //! # Example
 //!
@@ -41,7 +42,14 @@ pub mod data;
 /// Backtesting engine implementation.
 pub mod engine;
 
+/// Realistic fill models for backtesting.
+pub mod fill_models;
+
 pub use data::{HistoricalDataSource, MarketTick, OHLCVBar, VecDataSource};
 pub use engine::{
     BacktestConfig, BacktestEngine, BacktestResult, BacktestStrategy, SimulatedFill, SlippageModel,
+};
+pub use fill_models::{
+    FillModel, FillResult, ImmediateFillModel, MarketImpactFillModel, ProbabilisticFillModel,
+    QueuePositionFillModel, SimulatedOrder,
 };

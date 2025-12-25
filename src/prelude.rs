@@ -63,6 +63,8 @@ pub use crate::execution::{
 
 // Re-export backtest types
 pub use crate::backtest::{
-    BacktestConfig, BacktestEngine, BacktestResult, BacktestStrategy, HistoricalDataSource,
-    MarketTick, OHLCVBar, SimulatedFill, SlippageModel, VecDataSource,
+    BacktestConfig, BacktestEngine, BacktestResult, BacktestStrategy, FillModel, FillResult,
+    HistoricalDataSource, ImmediateFillModel, MarketImpactFillModel, MarketTick, OHLCVBar,
+    ProbabilisticFillModel, QueuePositionFillModel, SimulatedFill, SimulatedOrder, SlippageModel,
+    VecDataSource,
 };
