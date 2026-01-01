@@ -27,3 +27,6 @@ src/.DS_Store
 /cobertura.xml
 /tarpaulin-report.html
 .secrets
+
+# Issue templates (local only)
+.issues/

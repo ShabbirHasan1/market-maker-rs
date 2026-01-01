@@ -81,3 +81,7 @@ pub use crate::backtest::{
     QueuePositionFillModel, SimulatedFill, SimulatedOrder, SlippageModel, TradeRecord,
     VecDataSource,
 };
+
+// Re-export options types (when feature is enabled)
+#[cfg(feature = "options")]
+pub use crate::options::{OptionsAdapter, PortfolioGreeks, PositionGreeks};

@@ -142,7 +142,8 @@ println!("Bid: {}, Ask: {}", bid, ask);
 ### Feature Flags
 
 - `prometheus`: Enable Prometheus metrics export (adds `prometheus`, `hyper`, `tokio` dependencies)
-- `serde`: Enable serialization/deserialization for all types (enabled by default)
+- `serde`: Enable serialization/deserialization for all types
+- `options`: Enable OptionStratLib integration for options pricing and Greeks calculation
 
 ### Examples
 

@@ -128,7 +128,8 @@
 //! ## Feature Flags
 //!
 //! - `prometheus`: Enable Prometheus metrics export (adds `prometheus`, `hyper`, `tokio` dependencies)
-//! - `serde`: Enable serialization/deserialization for all types (enabled by default)
+//! - `serde`: Enable serialization/deserialization for all types
+//! - `options`: Enable OptionStratLib integration for options pricing and Greeks calculation
 //!
 //! ## Examples
 //!
@@ -289,3 +290,22 @@ pub mod backtest;
 /// use market_maker_rs::prelude::*;
 /// ```
 pub mod prelude;
+
+/// OptionStratLib integration module for options market making.
+///
+/// This module is only available when the `options` feature is enabled.
+/// It provides:
+/// - Greeks calculation and portfolio aggregation
+/// - Options pricing adapter
+/// - Time conversion utilities
+/// - Moneyness calculations
+///
+/// # Feature Flag
+///
+/// Enable with:
+/// ```toml
+/// [dependencies]
+/// market-maker-rs = { version = "0.2", features = ["options"] }
+/// ```
+#[cfg(feature = "options")]
+pub mod options;
