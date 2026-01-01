@@ -62,6 +62,7 @@ chain = ["dep:option-chain-orderbook", "options"]
 data-feeds = ["dep:tokio"]
 api = ["dep:axum", "dep:tokio", "dep:utoipa", "dep:tower-http", "serde"]
 persistence = ["dep:tokio"]
+multi-underlying = ["serde"]
 
 [[example]]
 name = "options_greeks"

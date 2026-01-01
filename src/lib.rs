@@ -503,3 +503,23 @@ pub mod api;
 /// ```
 #[cfg(feature = "persistence")]
 pub mod persistence;
+
+/// Multi-underlying support module for managing multiple assets simultaneously.
+///
+/// This module is only available when the `multi-underlying` feature is enabled.
+/// It provides:
+/// - **Cross-Asset Correlation**: Track correlations between underlyings
+/// - **Capital Allocation**: Multiple strategies (equal, risk parity, volatility-weighted)
+/// - **Unified Risk View**: Aggregate Greeks and P&L across all positions
+/// - **Per-Underlying Limits**: Individual risk limits per asset
+/// - **Cross-Asset Hedging**: Suggestions for hedging across correlated assets
+///
+/// # Feature Flag
+///
+/// Enable with:
+/// ```toml
+/// [dependencies]
+/// market-maker-rs = { version = "0.3", features = ["multi-underlying"] }
+/// ```
+#[cfg(feature = "multi-underlying")]
+pub mod multi_underlying;

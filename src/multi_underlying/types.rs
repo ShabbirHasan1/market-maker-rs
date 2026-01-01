@@ -152,8 +152,10 @@ impl UnderlyingState {
 /// Status of an underlying.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[derive(Default)]
 pub enum UnderlyingStatus {
     /// Actively trading.
+    #[default]
     Active,
     /// Paused (not quoting but tracking).
     Paused,
@@ -161,12 +163,6 @@ pub enum UnderlyingStatus {
     Halted,
     /// Disabled (not tracking).
     Disabled,
-}
-
-impl Default for UnderlyingStatus {
-    fn default() -> Self {
-        Self::Active
-    }
 }
 
 impl std::fmt::Display for UnderlyingStatus {

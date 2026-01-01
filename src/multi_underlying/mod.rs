@@ -31,5 +31,5 @@ mod types;
 
 pub use config::{CapitalAllocationStrategy, UnderlyingConfig};
 pub use manager::MultiUnderlyingManager;
-pub use risk::{CrossAssetHedge, UnifiedGreeks, UnifiedRisk};
+pub use risk::{CrossAssetHedge, HedgeType, UnifiedGreeks, UnifiedRisk};
 pub use types::{CorrelationEntry, UnderlyingState, UnderlyingStatus};

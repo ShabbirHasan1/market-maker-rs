@@ -89,10 +89,12 @@ impl UnderlyingConfig {
 /// Capital allocation strategy.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[derive(Default)]
 pub enum CapitalAllocationStrategy {
     /// Equal allocation across all underlyings.
     Equal,
     /// Allocation based on target weights.
+    #[default]
     TargetWeight,
     /// Risk parity (equal risk contribution).
     RiskParity,
@@ -100,12 +102,6 @@ pub enum CapitalAllocationStrategy {
     VolatilityWeighted,
     /// Performance-based (allocate more to winners).
     PerformanceBased,
-}
-
-impl Default for CapitalAllocationStrategy {
-    fn default() -> Self {
-        Self::TargetWeight
-    }
 }
 
 impl std::fmt::Display for CapitalAllocationStrategy {
@@ -150,6 +146,9 @@ mod tests {
     #[test]
     fn test_capital_allocation_strategy_display() {
         assert_eq!(CapitalAllocationStrategy::Equal.to_string(), "Equal");
-        assert_eq!(CapitalAllocationStrategy::RiskParity.to_string(), "RiskParity");
+        assert_eq!(
+            CapitalAllocationStrategy::RiskParity.to_string(),
+            "RiskParity"
+        );
     }
 }
