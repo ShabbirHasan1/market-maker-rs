@@ -523,3 +523,28 @@ pub mod persistence;
 /// ```
 #[cfg(feature = "multi-underlying")]
 pub mod multi_underlying;
+
+/// Event system for broadcasting market maker events.
+///
+/// This module is only available when the `events` feature is enabled.
+/// It provides a structured event handling system for broadcasting
+/// market maker events to the frontend and other consumers, with support for
+/// event history and reconnection.
+///
+/// # Features
+///
+/// - **Event Broadcasting**: Distribute real-time events to multiple consumers
+/// - **Event Filtering**: Subscribe to specific event types or symbols
+/// - **Event History**: Buffer for reconnection scenarios
+/// - **Event Batching**: Aggregate high-frequency updates
+/// - **Heartbeat**: Connection keep-alive mechanism
+///
+/// # Feature Flag
+///
+/// Enable with:
+/// ```toml
+/// [dependencies]
+/// market-maker-rs = { version = "0.3", features = ["events"] }
+/// ```
+#[cfg(feature = "events")]
+pub mod events;
