@@ -88,3 +88,10 @@ pub use crate::options::{
     GreeksLimits, HedgeOrder, HedgeType, OptionsAdapter, OptionsMarketMaker,
     OptionsMarketMakerConfig, OptionsMarketMakerImpl, PortfolioGreeks, PositionGreeks,
 };
+
+// Re-export chain types (when feature is enabled)
+#[cfg(feature = "chain")]
+pub use crate::chain::{
+    ChainMarketMaker, ChainMarketMakerConfig, ChainQuoteUpdate, ChainRiskLimits, ChainRiskManager,
+    RiskStatus,
+};

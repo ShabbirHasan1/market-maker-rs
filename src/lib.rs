@@ -309,3 +309,22 @@ pub mod prelude;
 /// ```
 #[cfg(feature = "options")]
 pub mod options;
+
+/// Option-Chain-OrderBook integration module.
+///
+/// This module is only available when the `chain` feature is enabled.
+/// It provides:
+/// - Multi-strike quoting across option chains
+/// - Chain-level Greeks aggregation
+/// - Chain risk management
+/// - ATM strike detection
+///
+/// # Feature Flag
+///
+/// Enable with:
+/// ```toml
+/// [dependencies]
+/// market-maker-rs = { version = "0.3", features = ["chain"] }
+/// ```
+#[cfg(feature = "chain")]
+pub mod chain;
