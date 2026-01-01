@@ -51,9 +51,17 @@ pub mod greeks;
 /// Options-specific market making functionality.
 pub mod market_maker;
 
+/// Greeks-based risk management.
+pub mod risk_manager;
+
 pub use adapter::OptionsAdapter;
 pub use greeks::{PortfolioGreeks, PositionGreeks};
 pub use market_maker::{
     GreeksLimits, HedgeOrder, HedgeType, OptionsMarketMaker, OptionsMarketMakerConfig,
     OptionsMarketMakerImpl,
+};
+pub use risk_manager::{
+    AutoHedger, AutoHedgerConfig, GreeksCircuitBreaker, GreeksCircuitBreakerConfig,
+    GreeksCircuitBreakerState, GreeksCircuitBreakerStatus, GreeksRiskManager, HedgeUrgency,
+    LimitUtilization, OrderDecision,
 };
