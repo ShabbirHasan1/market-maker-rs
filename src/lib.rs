@@ -397,6 +397,26 @@ pub mod execution;
 /// - **Slippage Models**: Fixed, percentage, volatility-based
 pub mod backtest;
 
+/// Real-time market data feeds module.
+///
+/// This module is only available when the `data-feeds` feature is enabled.
+/// It provides:
+/// - **MarketDataFeed Trait**: Abstract interface for data providers
+/// - **Price Updates**: Real-time underlying price streaming
+/// - **Trade Feed**: Trade events for order flow analysis
+/// - **IV Surface**: Implied volatility surface updates
+/// - **Mock Feed**: Testing without real connectivity
+///
+/// # Feature Flag
+///
+/// Enable with:
+/// ```toml
+/// [dependencies]
+/// market-maker-rs = { version = "0.3", features = ["data-feeds"] }
+/// ```
+#[cfg(feature = "data-feeds")]
+pub mod data_feeds;
+
 /// Prelude module for convenient imports.
 ///
 /// Import all commonly used types with:

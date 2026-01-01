@@ -98,3 +98,10 @@ pub use crate::chain::{
     ChainMarketMaker, ChainMarketMakerConfig, ChainQuoteUpdate, ChainRiskLimits, ChainRiskManager,
     RiskStatus,
 };
+
+// Re-export data feeds types (when feature is enabled)
+#[cfg(feature = "data-feeds")]
+pub use crate::data_feeds::{
+    DataSource, IVPoint, IVSurface, IVSurfaceUpdate, MarketDataFeed, MarketSnapshot, MockDataFeed,
+    PriceUpdate, ReconnectConfig, Trade as DataFeedTrade, TradeSide as DataFeedTradeSide,
+};

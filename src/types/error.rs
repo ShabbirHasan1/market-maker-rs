@@ -59,6 +59,13 @@ pub enum MMError {
     /// being after terminal time, or time moving backwards.
     #[error("invalid timestamp: {0}")]
     InvalidTimestamp(String) = 5,
+
+    /// Connection error.
+    ///
+    /// This error occurs when there are issues with network connectivity,
+    /// such as failed connections, timeouts, or disconnections.
+    #[error("connection error: {0}")]
+    ConnectionError(String) = 6,
 }
 
 impl MMError {
@@ -80,6 +87,12 @@ impl MMError {
         matches!(self, Self::NumericalError(_))
     }
 
+    /// Returns true if this error is related to connection issues.
+    #[must_use]
+    pub fn is_connection_error(&self) -> bool {
+        matches!(self, Self::ConnectionError(_))
+    }
+
     /// Returns the error message as a string slice.
     #[must_use]
     pub fn message(&self) -> &str {
@@ -89,7 +102,8 @@ impl MMError {
             | Self::NumericalError(msg)
             | Self::InvalidPositionUpdate(msg)
             | Self::InvalidQuoteGeneration(msg)
-            | Self::InvalidTimestamp(msg) => msg,
+            | Self::InvalidTimestamp(msg)
+            | Self::ConnectionError(msg) => msg,
         }
     }
 }

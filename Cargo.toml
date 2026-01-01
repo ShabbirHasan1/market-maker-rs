@@ -41,7 +41,7 @@ prometheus = { version = "0.14", optional = true }
 hyper = { version = "1.8", features = ["server", "http1"], optional = true }
 http-body-util = { version = "0.1", optional = true }
 hyper-util = { version = "0.1", features = ["tokio"], optional = true }
-tokio = { version = "1.48", features = ["rt-multi-thread", "net", "macros"], optional = true }
+tokio = { version = "1.48", features = ["rt-multi-thread", "net", "macros", "sync"], optional = true }
 optionstratlib = { version = "0.13", default-features = false, optional = true }
 chrono = { version = "0.4", optional = true }
 option-chain-orderbook = { version = "0.1", optional = true }
@@ -59,6 +59,7 @@ serde = ["dep:serde", "dep:serde_json", "dep:pretty-simple-display", "rust_decim
 prometheus = ["dep:prometheus", "dep:hyper", "dep:http-body-util", "dep:hyper-util", "dep:tokio"]
 options = ["dep:optionstratlib", "dep:chrono"]
 chain = ["dep:option-chain-orderbook", "options"]
+data-feeds = ["dep:tokio"]
 data-feeds = ["dep:tokio"]
 api = ["dep:axum", "dep:tokio", "dep:utoipa", "dep:tower-http", "serde"]
 
