@@ -56,6 +56,7 @@ serde = ["dep:serde", "dep:serde_json", "dep:pretty-simple-display", "rust_decim
 prometheus = ["dep:prometheus", "dep:hyper", "dep:http-body-util", "dep:hyper-util", "dep:tokio"]
 options = ["dep:optionstratlib", "dep:chrono"]
 chain = ["dep:option-chain-orderbook", "options"]
+persistence = ["dep:tokio"]
 
 [[example]]
 name = "options_greeks"
